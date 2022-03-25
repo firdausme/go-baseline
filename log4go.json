@@ -1,0 +1,24 @@
+{
+    "console": {
+        "enable": true,	
+        "level": "FINE"	
+    },  
+    "files": [{
+        "enable": true,
+        "level": "DEBUG",
+        "filename":"./log/go-baseline.log",
+        "category": "Development",
+        "pattern": "[%D %T] [%L] (%S) %M"
+    },{ 
+        "enable": false,
+        "level": "DEBUG",
+        "filename":"./log/rotate_go_baseline.log",
+        "category": "DevelopmentRotate",
+        "pattern": "[%D %T] [%L] (%S) %M",
+        "rotate": true,	
+        "maxsize": "500M",
+        "maxlines": "10K",
+        "daily": true,
+        "sanitize": true
+    }]
+}
