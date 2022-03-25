@@ -18,8 +18,8 @@ func NewServices(db *sql.DB, e *echo.Echo) {
 	// user
 	userRepository := repository.NewUserRepository(db)
 	userService := service.NewUserService(&userRepository)
-	productController := controller.NewUserController(&userService)
-	productController.Route(route)
+	userController := controller.NewUserController(&userService)
+	userController.Route(route)
 
 	// login
 	loginController := controller.NewLoginController(&userService)
